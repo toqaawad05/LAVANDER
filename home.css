@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5; /* Neutral background for the rest of the page */
+    text-align: left; /* Ensure all text is aligned to the left */
+    direction: ltr; /* Left to right direction for the text */
+}
+
+/* Top section with background image */
+.top-section {
+    width: 100%;
+    background-image: url('900de84f61e5aa5f375d74818dfbd17b.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    min-height: 600px; /* Height to cover header and content area */
+}
+
+/* Optional overlay for text clarity */
+.top-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    z-index: 0;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+
+nav a:hover {
+    background-color: #918b8f;
+    color: #af105a;
+    margin: 5px;
+    padding: 10px;
+}
+.material-symbols-outlined {
+    'FILL' 0,
+   'wght' 400,
+   'GRAD' 0,
+   'opsz' 24;
+   font-size: 24px;
+   color: #2c0126;
+   text-decoration: none
+}
+.material-symbols-outlined:hover{
+    background-color: #dd5c98;
+    color: #ec98c9;
+}
+
+.sin-btn {
+    padding: 8px 20px;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    background-color: #5b4b4a;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #8b7e74;
+}
+
+/* Content inside top-section */
+.top-content {
+    position: relative;
+    z-index: 1;
+    text-align: left; /* Ensure text is aligned to the left */
+    margin-top: 100px;
+    padding-left: 40px; /* Optional padding for better alignment */
+}
+
+/* Gradient text */
+.top-content h1 {
+    font-size: 2.5em;
+    background-image: linear-gradient(to right,#af105a, #e086b0, #ee5d9c, #907876); /* Gradient colors */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Make the text transparent so the gradient shows */
+}
+
+.top-content p {
+    color: #ffefd5;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.top-content button {
+    padding: 12px 30px;
+    font-size: 1em;
+    background-color: #b02365;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.top-content button:hover {
+    background-color: #ec98c9;
+    color: #af105a;
+}
+
+/* Main Content Section */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 20px;
+}

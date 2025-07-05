@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول لمتجر الزهور</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://i.pinimg.com/736x/75/0c/78/750c7855de9ba33ec8bc2f08e6794102.jpg'); /* استبدل الرابط برابط صورة الخلفية الخاصة بك */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    color: #af105a; /* لون أخضر يناسب ألوان الزهور */
+    margin-bottom: 15px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #af105a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #af105a;
+}
+
+.login-container p {
+    font-size: smaller;
+    margin-top: 15px;
+}
+
+.login-container a {
+    color: #af105a;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>مرحبًا بك في [اسم متجر الزهور الخاص بك]</h1>
+        <p>يرجى تسجيل الدخول للمتابعة</p>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="اسم المستخدم" required>
+            <input type="password" name="password" placeholder="كلمة المرور" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+        <p>ليس لديك حساب؟ <a href="signup.html" target="_blank">إنشاء حساب جديد</a></p>
+    </div>
+</body>
+</html>

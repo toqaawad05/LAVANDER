@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gift</title>
+    <link href ="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+ .top-section {
+    width: 100%;
+    color: #af105a;
+    position: relative;
+    min-height: 600px; /* Height to cover header and content area */
+}
+
+/* Remove the dark overlay */
+.top-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent; /* Transparent background */
+    z-index: 0;
+}
+
+header {
+    width: 100%;
+    font-family: 'Tangerine', serif;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    font-family: 'Tangerine', serif;
+    font-size: 1.5em;
+    color: #af105a;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    border-radius: 15px;
+}
+
+nav ul li {
+    margin-left: 30px;
+    border-radius: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #af105a; /* Text color only */
+    font-size: 1em;
+    border-radius: 15px;
+}
+
+nav a:hover {
+    color: #5b4b4a;
+    margin: 5px;
+    padding: 10px;
+}
+
+.header1 h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.header1-p {
+  text-align: left;
+}
+
+
+.review-card strong {
+  font-weight: bold;
+}
+
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+    padding: 10px;
+    position: relative;
+}
+
+.product-card .label {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-card .view-details {
+    background-color: #af105a;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+}
+
+.product-card .view-details:hover {
+    background-color: #E6BEAE;
+    color: #5b4b4a;
+}
+
+.reviews-section {
+  padding: 50px;
+  margin: 50px;
+  border: 10px;
+  text-align: center;
+background-color: rgb(255, 255, 255);
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.reviews-section .description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.review-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.review-card .stars {
+  color: #fa9b01;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.review-card strong {
+  font-weight: bold;
+}
+
+
+           footer {
+  font-family: 'Tangerine', serif;
+  background-color: #f9fafc;
+  padding: 50px;
+  color: #af105a;
+  border-radius: 20px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-app, .footer-social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-app p, .footer-social p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Tangerine', serif;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #af105a;
+  font-size: 24px;
+}
+
+.social-icons a:hover {
+  color: #333;
+}
+</style>
+</head>
+<body>
+    <div class="top-section">
+        <header>
+            <div class="logo">Lavender</div>
+            <nav>
+                <ul>
+                    
+                  <li><a href="test.html" target="_blank">Home</a></li>
+                  <li><a href="flwer.html" target="_blank">Flower</a></li>
+                    <li><a href="gift.html" target="_blank">Gifts</a></li>
+                    <li><a href="Plants.html" target="_blank">Plantsy</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    
+                    
+                </ul>
+            </nav>
+            <a href="sin up.html" class="material-symbols-outlined" target="_blank">account_circle </a>
+          </header>
+          
+
+
+          <div>
+            <header class="header1">
+              <h2>Gifts</h2>
+            </header>
+            
+
+
+
+
+
+            <div class="product-grid">
+              <div class="product-card">
+                  <div class="label">SHIPS FREE!</div>
+                  <img src="https://media.bloomandwild.com/v1/1000x1000/filters:format(webp):quality(75)/https://assets-0.bloomandwild.com/letterbox-main/gift-edit-neom-mc-ultimate-wellbeing-minis-uic/24dac0b9-f015-4b98-853d-2a6d35fb961c.jpg" alt="Lindy Hop">
+                  <h3>The Ultimate Wellbeing Minis by NEOM</h3>
+                  <button class="view-details">View Details - $45.00</button>
+              </div>
+            
+              <div class="product-card">
+                  <div class="label">USA GROWN</div>
+                  <img src="https://media.bloomandwild.com/v1/1000x1000/filters:format(webp):quality(75)/https://assets-0.bloomandwild.com/letterbox-main/the-letterbox-brownies-by-cutter-squidge/905a952d-f4a3-406c-b207-b7d9a913878a.jpg" alt="The Harvest Swag">
+                  <h3>The Floral Letterbox Brownies</h3>
+                  <button class="view-details">View Details - $67.00</button>
+              </div>
+            
+              <div class="product-card">
+                  <div class="label">SHIPS FREE!</div>
+                  <img src="https://media.bloomandwild.com/v1/1000x1000/filters:format(webp):quality(75)/https://assets-0.bloomandwild.com/letterbox-main/biscuiteers-birthday-biscuits-lb-uic/17962636-342b-4d62-8e90-86e89b643ac4.jpg" alt="Lion's Share">
+                  <h3>The Letterbox Birthday Biscuits by Biscuiteers</h3>
+                  <button class="view-details">View Details - $89.00</button>
+              </div>
+            </div>
+            <div class="product-grid">
+              <div class="product-card">
+                  <div class="label">SHIPS FREE!</div>
+                  <img src="https://media.bloomandwild.com/v1/1000x1000/filters:format(webp):quality(75)/https://assets-0.bloomandwild.com/letterbox-main/gift-edit-the-sleepy-nights-bundle-v2-uic/d4964898-cada-4c96-8f85-3925138b5625.jpg" alt="Lindy Hop">
+                  <h3>The Sleepy Nights Bundle</h3>
+                  
+                  <button class="view-details">View Details - $99.00</button>
+              </div>
+            
+              <div class="product-card">
+                  <div class="label">USA GROWN</div>
+                  <img src="https://media.bloomandwild.com/v1/1000x1000/filters:format(webp):quality(75)/https://assets-0.bloomandwild.com/letterbox-main/gift-edit-heather-evelyn-love-candlesick-set-uic/a6fc3f68-62a9-469c-badc-ca3692e5267d.jpg" alt="The Harvest Swag">
+                  <h3>The Love Candlestick & Holder Set</h3>
+                 
+                  <button class="view-details">View Details - $23.00</button>
+              </div>
+            
+              <div class="product-card">
+                  <div class="label">SHIPS FREE!</div>
+                  <img src="https://media.bloomandwild.com/v1/1080x1080/filters:format(webp):quality(75)/https://media.bloomandwild.com/v1/1500x1500/filters:format(webp):quality(75)/https://assets-0.bloomandwild.com/letterbox-main/gift-edit-mc-youre-doing-great-bundle-uic/c7f3c5e9-42b9-4ff3-9ea6-8a1d5c5b6717.jpeg" alt="Lion's Share">
+                  <h3>The 'Mama, You're Doing Brill' Bundle</h3>
+                 
+                  <button class="view-details">View Details - $89.00</button>
+              </div>
+            </div>
+            <div class="product-grid">
+              <div class="product-card">
+                  <div class="label">SHIPS FREE!</div>
+                  <img src="https://images.farmgirlflowers.com/image/upload/f_auto,q_auto,dpr_2.0,h_830,w_830/v1/production/rctaudbzectfrgfysopo.webp" alt="Lindy Hop">
+                  <h3>Dressed to Chill</h3>
+                  <p>A best-selling & free shipping bouquet!</p>
+                  <button class="view-details">View Details - $45.00</button>
+              </div>
+            
+              <div class="product-card">
+                  <div class="label">USA GROWN</div>
+                  <img src="https://media.bloomandwild.com/v1/750x750/filters:format(webp):quality(75)/https://assets-0.bloomandwild.com/letterbox-main/maegen-sunshine-candle-ht-uic/bf279156-accd-44e0-8fb3-e48b06ffc104.jpg" alt="The Harvest Swag">
+                  <h3>The Sunshine Candle</h3>
+                  
+                  <button class="view-details">View Details - $4.70</button>
+              </div>
+              <div class="product-card">
+                <div class="label">USA GROWN</div>
+                <img src="https://media.bloomandwild.com/v1/1080x1080/filters:format(webp):quality(75)/https://media.bloomandwild.com/v1/1500x1500/filters:format(webp):quality(75)/https://assets-0.bloomandwild.com/letterbox-main/the-letterbox-holly-tree/38e66ae8-00da-4257-8100-80c0ceda0a2d.jpeg" alt="The Harvest Swag">
+                <h3>The Letterbox Holly Tree</h3>
+                
+                <button class="view-details">View Details - $38.00</button>
+            </div>
+            
+              
+            </div>
+            <section class="reviews-section">
+              <h2>For the love of Farmgirl</h2>
+              <p class="description">
+                We're probably (OK, definitely) biased when it comes to buying flowers online, but don't just take our word for it. Our (rave) reviews speak for themselves.
+              </p>
+              <div class="reviews-container">
+                <div class="review-card">
+                  <h3>Ngoc M.</h3>
+                  <p class="stars">★★★★★</p>
+                  <p><strong>Even more stunning in real life</strong></p>
+                  <p>
+                    My friend LOVED her flowers and was in awe of them...she has been changing out the water every day so they remain beautiful and how they arrived!
+                  </p>
+                </div>
+                <div class="review-card">
+                  <h3>Beth B.</h3>
+                  <p class="stars">★★★★★</p>
+                  <p><strong>An easy choice when sending a gift to WOW!</strong></p>
+                  <p>
+                    It’s a relief to know anytime I order Farmgirl Flowers that the arrangement will WOW the recipient.
+                  </p>
+                </div>
+                <div class="review-card">
+                  <h3>Donna R.</h3>
+                  <p class="stars">★★★★★</p>
+                  <p><strong>Never have I not been delighted</strong></p>
+                  <p>
+                    Each time I order from Farmgirl, my recipients are treated to the most amazing, fresh, beautiful flowers on the planet.
+                  </p>
+                </div>
+              </div>
+              </section>
+          </div>
+          
+
+
+
+    <section class="reviews-section">
+        <h2>For the love of Farmgirl</h2>
+        <p class="description">
+          We're probably (OK, definitely) biased when it comes to buying flowers online, but don't just take our word for it. Our (rave) reviews speak for themselves.
+        </p>
+        <div class="reviews-container">
+          <div class="review-card">
+            <h3>Ngoc M.</h3>
+            <p class="stars">★★★★★</p>
+            <p><strong>Even more stunning in real life</strong></p>
+            <p>
+              My friend LOVED her flowers and was in awe of them...she has been changing out the water every day so they remain beautiful and how they arrived!
+            </p>
+          </div>
+          <div class="review-card">
+            <h3>Beth B.</h3>
+            <p class="stars">★★★★★</p>
+            <p><strong>An easy choice when sending a gift to WOW!</strong></p>
+            <p>
+              It’s a relief to know anytime I order Farmgirl Flowers that the arrangement will WOW the recipient.
+            </p>
+          </div>
+          <div class="review-card">
+            <h3>Donna R.</h3>
+            <p class="stars">★★★★★</p>
+            <p><strong>Never have I not been delighted</strong></p>
+            <p>
+              Each time I order from Farmgirl, my recipients are treated to the most amazing, fresh, beautiful flowers on the planet.
+            </p>
+          </div>
+        </div>
+        </section>
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-links">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Sell With Us</a></li>
+              <li><a href="#">Coupons & Deals</a></li>
+              <li><a href="#">Cancellation & Refund</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">Retail Stores</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Media</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Quotes</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Corporate Gifts</a></li>
+              <li><a href="#">Franchise</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">WhatsApp</a></li>
+              <li><a href="#">Download App</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-social">
+          <p>Spread The Love On Social Media</p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </footer>
+      <div>
+        <pre>
+
+
+        </pre>
+      </div>
+</body>
+</html>

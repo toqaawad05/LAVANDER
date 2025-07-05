@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lavender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Lavender – Your Oasis of Exquisite Blooms! Discover the delicate beauty and fragrance of premium flowers that speak the language of elegance and charm. At Lavender, we are passionate about crafting moments with handpicked, high-quality blooms, thoughtfully arranged to brighten your life’s special occasions or simply your everyday. With a unique selection of flowers and bouquets, we bring you the finest in floral artistry, infused with a touch of sophistication and timeless grace. Whether you’re celebrating love, expressing gratitude, or adding a touch of nature to your space, Lavender is here to make every moment bloom beautifully.">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wg<!DOCTYPE html>
+   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lavender Themed Webpage</title>
+        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            :root {
+                --lavender-primary: #af105a;
+                --lavender-secondary: #e855bc;
+                --lavender-light: #f5f5f5;
+                --text-dark: #333;
+                --text-light: #fff;
+            }
+    
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: 'Tangerine', serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                background-color: var(--lavender-light);
+                text-align: left;
+                direction: ltr;
+                margin: 30px;
+                line-height: 1.6;
+            }
+    
+            .top-section {
+                width: 100%;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('download (1).jpeg');
+                background-size: cover;
+                background-position: center;
+                color: var(--text-light);
+                position: relative;
+                min-height: 700px;
+            }
+    
+            header {
+                width: 100%;
+                padding: 20px 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+                background: rgba(175, 16, 90, 0.8);
+                backdrop-filter: blur(5px);
+            }
+    
+            .logo {
+                font-size: 2em;
+                color: var(--text-light);
+                font-weight: bold;
+                transition: transform 0.3s ease;
+            }
+    
+            .logo:hover {
+                transform: scale(1.05);
+            }
+    
+            nav ul {
+                display: flex;
+                list-style-type: none;
+                gap: 30px;
+            }
+    
+            nav a {
+                text-decoration: none;
+                color: var(--text-light);
+                font-size: 1.2em;
+                padding: 10px 20px;
+                border-radius: 25px;
+                transition: all 0.3s ease;
+            }
+    
+            nav a:hover {
+                background-color: var(--lavender-secondary);
+                transform: translateY(-2px);
+            }
+    
+            .material-symbols-outlined {
+                font-size: 40px;
+                color: var(--text-light);
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+    
+            .material-symbols-outlined:hover {
+                background-color: var(--text-light);
+                color: var(--lavender-primary);
+                border-radius: 50%;
+            }
+    
+            .top-content {
+                position: relative;
+                z-index: 1;
+                text-align: left;
+                margin-top: 100px;
+                padding-left: 40px;
+            }
+    
+            .top-content h1 {
+                font-size: 3.5em;
+                background-image: linear-gradient(to right, var(--lavender-primary), var(--lavender-secondary));
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                margin-bottom: 20px;
+            }
+    
+            .top-content p {
+                color: var(--text-light);
+                font-size: 1.4em;
+                margin: 10px 0;
+                max-width: 600px;
+            }
+    
+            .top-content button {
+                background-color: var(--lavender-primary);
+                color: var(--text-light);
+                padding: 15px 40px;
+                font-size: 1.4em;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 20px;
+            }
+    
+            .top-content button:hover {
+                background-color: var(--lavender-secondary);
+                transform: scale(1.05);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+    
+            /* Gallery Section */
+            .gallery-section {
+                max-width: 1200px;
+                width: 100%;
+                padding: 40px;
+                margin-top: -150px;
+                position: relative;
+                z-index: 2;
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+    
+            .gallery-section h2 {
+                color: var(--lavender-primary);
+                margin-bottom: 30px;
+                font-size: 2.5em;
+            }
+    
+            .image-gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                margin-top: 30px;
+            }
+    
+            .image-item img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 15px;
+                transition: transform 0.4s ease;
+            }
+    
+            .image-item:hover img {
+                transform: scale(1.05);
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                body {
+                    margin: 15px;
+                }
+    
+                header {
+                    flex-direction: column;
+                    gap: 20px;
+                    text-align: center;
+                    padding: 15px;
+                }
+    
+                nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+    
+                .top-content h1 {
+                    font-size: 2.5em;
+                    text-align: center;
+                    padding: 0 20px;
+                }
+    
+                .gallery-section {
+                    margin-top: -100px;
+                    padding: 20px;
+                }
+    
+                .image-gallery {
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+            }
+    
+            @media (prefers-reduced-motion: reduce) {
+                * {
+                    transition: none !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top-section">
+            <header>
+                <div class="logo">Lavender</div>
+                <nav>
+                    <ul>
+                        <li><a href="#flower">Flowers</a></li>
+                        <li><a href="#gifts">Gifts</a></li>
+                        <li><a href="#plants">Plants</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="material-symbols-outlined">account_circle</a>
+            </header>
+    
+            <div class="top-content">
+                <h1>Welcome to Lavender</h1>
+                <p>Experience the beauty of nature with our carefully curated collection of flowers and plants.</p>
+                <button>Explore Now</button>
+            </div>
+        </div>
+    
+        <main>
+            <section class="gallery-section">
+                <h2>Our Collection</h2>
+                <div class="image-gallery">
+                    <div class="image-item"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Flower 1"></div>
+                    <div class="image-item"><img src="https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Flower 2"></div>
+                    <div class="image-item"><img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Flower 3"></div>
+                </div>
+            </section>
+        </main>
+    </body>
+    </html>ht@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <header class="logo">
+            <h1><i>Lavender</i></h1>
+            <nav class="navbar">
+                <a href="#home" target="_blank">Home</a>
+                <a href="#about" target="_blank">About</a>
+                <a href="#product" target="_blank">Products</a>
+                <a href="#review" target="_blank">Review</a>
+                <a href="#content" target="_blank">Content</a>
+            </nav>
+            <div>
+                <a href="#" class="material-symbols-outlined" target="_blank">favorite</a>
+                <a href="#" class="material-symbols-outlined" target="_blank">search</a>
+                <a href="#" class="material-symbols-outlined" target="_blank">shopping_cart_checkout</a>
+                <a href="login.html" class="material-symbols-outlined" target="_blank">account_circle </a>
+            </div>
+        </header>
+    </div>
+    <section class="hero">
+        <div class="hero-background">
+            <img src="29c222bc314d73a39525ea533e235f71.jpg" alt="Flower Background">
+        </div>
+        <div   class="hero-content">
+            <h2><i>Beautiful Flower Arrangements</i></h2>
+            <p>Experience the best selection of seasonal flowers.</p>
+            <button onclick="window.location.href='https://example.com';">Shop Now</button>
+
+        </div>
+        <div class="footer">
+            <h4>تواصل معنا</h4>
+            <p>للاستفسارات، يرجى التواصل معنا عبر البريد الإلكتروني:</p>
+            <a href="mailto:example@example.com" ">example@example.com</a>
+            >
+        </div>
+    </section>
+    
+</body>
+</html>

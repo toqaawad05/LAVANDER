@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Themed Webpage</title>
+    <link href ="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        html {
+    scroll-behavior: smooth; }
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body style */
+        body {
+
+            font-family: 'Tangerine', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5; 
+            text-align: left; 
+            direction: ltr; /* Left to right direction for the text */
+            margin: 30px;
+          
+        }
+        /* Top section with background image */
+        .top-section {
+            width: 100%;
+            background-image: url('download (1).jpeg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            position: relative;
+            min-height: 700px; /* Height to cover header and content area */
+        }
+
+        /* Optional overlay for text clarity */
+        .top-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+            z-index: 0;
+        }
+
+        header {
+            width: 100%;
+            font-family: 'Tangerine', serif;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+          font-family: 'Tangerine', serif;
+          font-size: 1.5em;
+          color: #fff;
+          font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            border-radius: 15px;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+            border-radius: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5em;
+            border-radius: 15px;
+        }
+
+       
+        nav a:hover {
+            background-color: #918b8f;
+            color: #af105a;
+            margin: 5px;
+            padding: 10px;
+        }
+        .material-symbols-outlined {
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+          font-size: 40px;
+           color: #ffffff;
+           text-decoration: none
+           
+        }
+        .material-symbols-outlined:hover{
+            background-color: #ffffff;
+            color: #e855bc;
+            border-radius: 15px;
+        }
+
+       
+
+        /* Content inside top-section */
+        .top-content {
+            position: relative;
+            z-index: 1;
+            text-align: left; /* Ensure text is aligned to the left */
+            margin-top: 100px;
+            padding-left: 40px; /* Optional padding for better alignment */
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Gradient text */
+        .top-content h1 {
+          h
+          font-family: 'Tangerine', serif;
+            font-size: 3em;
+            background-image: linear-gradient(to right, #b02365, #ff6347, #8b7e74, #4f05ee); /* Gradient colors */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent; /* Make the text transparent so the gradient shows */
+        }
+
+        .top-content p {
+            color: #ffefd5;
+            font-size: 1.2em;
+            margin: 10px 0;
+            font-family: 'Tangerine', serif;
+        }
+
+        .top-content button {
+    background-color: #af105a;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.top-content button:hover {
+    background-color: #d43f6a;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+        /* Main Content Section */
+
+        .shop-link {
+            color: #af105a;
+            text-decoration: none;
+            font-weight: bold;
+}
+
+
+
+
+
+.gallery-section {
+    display: flex;
+    font-family: 'Tangerine', serif;
+    max-width: 1800px;
+    width: 100%;
+    padding: 80px;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-section {
+    flex: 1;
+}
+
+.text-section h2 {
+    font-size: 32px;
+    color: #af105a;
+    margin: 0;
+    font-family: 'Tangerine', serif;
+}
+
+.text-section p {
+    color: #b0755e;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 10px;
+    flex: 1.5;
+}
+
+.image-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.05);
+}
+.about {
+ 
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px; 
+    font-family: 'Tangerine', serif;
+    
+    line-height: 1.8; 
+    max-width: 1700px;
+}
+
+.about h3 {
+  font-family: 'Tangerine', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #af105a; 
+    text-align: center; 
+    
+    
+}
+
+.about p {
+  font-family: 'Tangerine', serif;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify; 
+    padding: 0 10px; 
+}
+
+.about p strong {
+  font-family: 'Tangerine', serif;
+    font-weight: 700;
+    color: #af105a; 
+}
+
+
+
+
+.gifts-section {
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  color: #af105a;
+  margin-bottom: 20px;
+}
+
+.gifts-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.gift-item {
+  width: 150px;
+  text-align: center;
+}
+
+.gift-item img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.gift-item img:hover {
+  transform: scale(1.1);
+}
+
+.gift-item p {
+  font-family: 'Tangerine', serif;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+
+.delivery-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.text-content h1 {
+  font-family: 'Tangerine', serif;
+  font-size: 2.5rem;
+  color: #af105a;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-family: 'Tangerine', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.reviews-section {
+  padding: 50px;
+  margin: 50px;
+  border: 10px;
+  text-align: center;
+background-color: rgb(255, 255, 255);
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.reviews-section .description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.review-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.review-card .stars {
+  color: #fa9b01;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.review-card strong {
+  font-weight: bold;
+}
+
+
+footer {
+  font-family: 'Tangerine', serif;
+  background-color: #f9fafc;
+  padding: 50px;
+  color: #af105a;
+  border-radius: 20px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-app, .footer-social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-app p, .footer-social p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Tangerine', serif;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #af105a;
+  font-size: 24px;
+}
+
+.social-icons a:hover {
+  color: #333;
+}
+
+
+
+
+
+    
+    </style>
+</head>
+<body>
+    <!-- Top section with header and background image -->
+    <div class="top-section">
+        <header>
+            <div class="logo">Lavender</div>
+            <nav>
+                <ul>
+                    
+
+                    <li><a href="flwer.html" target="_blank">Flower</a></li>
+                    <li><a href="gift.html" target="_blank">Gifts</a></li>
+                    <li><a href="Plants.html" target="_blank">Plants</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    
+                    
+                </ul>
+            </nav>
+            <a href="sin up.html" class="material-symbols-outlined" target="_blank">account_circle </a>
+        </header>
+
+        <!-- Content inside top section -->
+        <div class="top-content">
+            <h1>Welcome to Lavender website</h1>
+            <p>Send flowers anywhere, for any occasion. Lavender is a perfect gift for special events.</p>
+            <button>Choose Now</button>
+        </div>
+    </div>
+    
+
+    
+    
+      
+        
+    <div class="gallery-section">
+        <div class="text-section">
+            <h2>We're even cuter in person.</h2>
+            <p>See some. Share some. #fgflove</p>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            
+        </div>
+        <div class="image-gallery">
+            <div class="image-item"><img src="https://scontent.cdninstagram.com/v/t51.29350-15/453516603_692367956406472_4704453837238032577_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=7QYhffZs-UoQ7kNvgFpvcCj&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=Aw2T9gEeenibweE8YAEDAWx&oh=00_AYBVxPozGV9DiGp5zuu4NOv8a_hNw0CkOg4Izt2UYIcz0g&oe=675D7C6C" alt="Flower 1"></div>
+            <div class="image-item"><img src="https://scontent.cdninstagram.com/v/t51.29350-15/452277134_1480681376153142_4676138676605699563_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=18de74&_nc_ohc=ZvM-vqCuzFAQ7kNvgEMgXTu&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=AC0heOPrnmAt7USgRj7gLKD&oh=00_AYDcd8jSBea1SlU0DXmJSWfiB00dJ9qGYspZM21UxjiL5g&oe=675D6584" alt="Flower 2"></div>
+            <div class="image-item"><img src="https://images.farmgirlflowers.com/image/upload/f_auto,q_auto,dpr_2.0,h_830,w_830/v1/production/pv3tgs3gctfcjwyke4i6.webp" alt="Flower 3"></div>
+            <div class="image-item"><img src="https://images.farmgirlflowers.com/image/upload/f_auto,q_auto,dpr_2.0,h_816,w_816/v1/production/cayaqjbypr8le9emls3m.webp" alt="Flower 4"></div>
+            <div class="image-item"><img src="https://images.farmgirlflowers.com/image/upload/f_auto,q_auto,dpr_2.0,h_595,w_595/v1/production/izq0mfqjz0t3yfsfvr9c.webp" alt="Flower 5"></div>
+            <div class="image-item"><img src="https://images.farmgirlflowers.com/image/upload/f_auto,q_auto,dpr_2.0,h_595,w_595/v1/production/rctaudbzectfrgfysopo.webp" alt="Flower 6"></div>
+        </div>
+    </div>
+
+
+
+    
+    <div class="about">
+        <div class="about" id="about">
+            <h3>About Us</h3>
+            <p>Welcome to Lavender, your ultimate destination for the finest and most beautiful flowers! We believe that flowers are not just beautiful plants, but a language of love, joy, and lasting memories. Our shop was founded to offer you a wide variety of fresh, natural flowers, providing everything you need to express your emotions on any occasion.</p>
+            
+            <p>At Lavender, we care about every detail, from selecting the finest local and international flowers to arranging them in a way that suits every event. Whether you need a special bouquet for a birthday, wedding, or to wish someone well, we're here to meet all your needs with fast and reliable delivery service.</p>
+            
+            <p>Each flower we sell has its own unique story, and we are always striving to provide the best experience for our customers. Our team of floral experts is ready to offer advice and help you choose the perfect bouquet that expresses your feelings.</p>
+        
+            <p><strong>Our mission</strong> is to make every moment beautiful and colorful with a touch of flowers. We promise to deliver high quality and exceptional customer service. Let us be part of your special occasions, and let’s make every moment a celebration of love and beauty.</p>
+        </div>
+       
+
+
+  <section class="gifts-section">
+    <h2 class="title">Gifts for all</h2>
+    <div class="gifts-container">
+      <div class="gift-item">
+        <img src="https://imagecdn.prod.floward.com/web/Files/cms/81488b87-c8fa-4707-84bf-daf4deb30c83.png?w=320&fit=crop&auto=format" alt="friends">
+        <p>friends</p>
+      </div>
+      <div class="gift-item">
+        <img src="https://imagecdn.prod.floward.com/web/Files/cms/817d3080-2f9a-47ba-b587-8569aaf0d64a.png?w=320&fit=crop&auto=format" alt="Sons">
+        <p>Sons</p>
+      </div>
+      <div class="gift-item">
+        <img src="https://imagecdn.prod.floward.com/web/Files/cms/4e9835fd-352e-47d3-9312-d25a4d5a91ea.png?w=320&fit=crop&auto=format" alt="Aunt">
+        <p>Aunt</p>
+      </div>
+      <div class="gift-item">
+        <img src="https://imagecdn.prod.floward.com/web/Files/cms/41991672-9407-4927-99c1-f0552fb806fb.png?w=320&fit=crop&auto=format" alt="wife">
+        <p>wife</p>
+      </div>
+      <div class="gift-item">
+        <img src="https://imagecdn.prod.floward.com/web/Files/cms/cc636636-8c0d-4d19-9c90-60842e591f8f.png?w=320&fit=crop&auto=format" alt="the mom">
+        <p>the mom</p>
+      </div>
+      <div class="gift-item">
+        <img src="https://imagecdn.prod.floward.com/web/Files/cms/531faac9-954e-431a-bb3b-862e2b942503.png?w=320&fit=crop&auto=format" alt="Grandma">
+        <p>Grandma</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="delivery-section">
+    <div class="text-content">
+      <h1>Delivering coast to coast</h1>
+      <p>
+        We don't just design our flower arrangements to wow - we design them to deliver 
+        right to you or your recipient’s doorstep nationwide.
+      </p>
+    </div>
+    <div class="image-content">
+      <img src="https://fgflocalimages.s3.amazonaws.com/Homepage/hopscotch/image2.jpg" alt="Flower Arrangement">
+    </div>
+  </section>
+
+  
+  <section class="reviews-section">
+    <h2>For the love of Farmgirl</h2>
+    <p class="description">
+      We're probably (OK, definitely) biased when it comes to buying flowers online, but don't just take our word for it. Our (rave) reviews speak for themselves.
+    </p>
+    <div class="reviews-container">
+      <div class="review-card">
+        <h3>Ngoc M.</h3>
+        <p class="stars">★★★★★</p>
+        <p><strong>Even more stunning in real life</strong></p>
+        <p>
+          My friend LOVED her flowers and was in awe of them...she has been changing out the water every day so they remain beautiful and how they arrived!
+        </p>
+      </div>
+      <div class="review-card">
+        <h3>Beth B.</h3>
+        <p class="stars">★★★★★</p>
+        <p><strong>An easy choice when sending a gift to WOW!</strong></p>
+        <p>
+          It’s a relief to know anytime I order Farmgirl Flowers that the arrangement will WOW the recipient.
+        </p>
+      </div>
+      <div class="review-card">
+        <h3>Donna R.</h3>
+        <p class="stars">★★★★★</p>
+        <p><strong>Never have I not been delighted</strong></p>
+        <p>
+          Each time I order from Farmgirl, my recipients are treated to the most amazing, fresh, beautiful flowers on the planet.
+        </p>
+      </div>
+    </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-links">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Sell With Us</a></li>
+              <li><a href="#">Coupons & Deals</a></li>
+              <li><a href="#">Cancellation & Refund</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">Retail Stores</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Media</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Quotes</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Corporate Gifts</a></li>
+              <li><a href="#">Franchise</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">WhatsApp</a></li>
+              <li><a href="#">Download App</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-social">
+          <p>Spread The Love On Social Media</p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </footer>
+      <div>
+        <pre>
+
+
+        </pre>
+      </div>
+   
+    
+
+   
+</body>
+</html>
+  
